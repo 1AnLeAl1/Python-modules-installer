@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-import sys, os
 
+import sys, os
 from PyQt5.QtWidgets import ( QWidget, QLabel, QLineEdit, QMessageBox, QTextEdit, QGridLayout, QApplication, QPushButton )
 
 
-class Example( QWidget ):
+class A( QWidget ):
 
     def __init__( self ):
         super().__init__()
@@ -14,9 +14,9 @@ class Example( QWidget ):
 
     def initUI( self ):
 
-    	text = QLabel( 'Введите название модуля:', self )
+    	text = QLabel( 'Enter module name:', self )
     	name_input = QLineEdit( self )
-    	qbtn = QPushButton( 'Установить', self )
+    	qbtn = QPushButton( 'Install', self )
     	qbtn.clicked.connect( lambda x: self.install(name_input.text()) )
     	
     	grid = QGridLayout()
@@ -36,8 +36,8 @@ class Example( QWidget ):
 
     	wmsg = QMessageBox()
     	wmsg.setIcon(QMessageBox.Warning)
-    	wmsg.setText( 'Не выходите из программы до оканчания установки!' )
-    	wmsg.setWindowTitle( 'Внимание!' )
+    	wmsg.setText( 'Do not exit the program until the installation is complete!' )
+    	wmsg.setWindowTitle( 'Warning!' )
     	wmsg.setStandardButtons( QMessageBox.Ok | QMessageBox.Cancel )
     	wmsg.exec_()
 
@@ -45,13 +45,13 @@ class Example( QWidget ):
     	
     	imsg = QMessageBox()
     	imsg.setIcon( QMessageBox.Information )
-    	imsg.setText( 'Установка завершена' )
-    	imsg.setWindowTitle( 'Информация' )
+    	imsg.setText( 'Installation complete' )
+    	imsg.setWindowTitle( 'Information' )
     	imsg.setStandardButtons( QMessageBox.Ok | QMessageBox.Cancel )
     	imsg.exec_()
 
 if __name__ == '__main__':
 
     app = QApplication( sys.argv )
-    ex = Example()
+    ex = A()
     sys.exit( app.exec_() )
