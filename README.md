@@ -1,6 +1,6 @@
 # Python-modules-installer
 
-На русском
+    На русском
     Привет! Эта программа призвана облегчить установку python модулей.
 Для работы программы также требуются некоторые модули, поэтому сперва
 необходимо запустить программу preinstaller. Когда установка
@@ -12,7 +12,7 @@
 соответствующее сообщение.
     Программа предназначена для Linux!!!
 
-English translation
+    English translation
     Hello! This program is designed to facilitate the installation of
 python modules. The program also requires some modules, so first you
 need to run the preinstaller program for your OS. When setting necessary
